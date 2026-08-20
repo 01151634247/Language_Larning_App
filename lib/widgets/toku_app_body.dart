@@ -10,7 +10,7 @@ class TokuAppBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        container(
+        catgory(
           onTap: () {
             Navigator.push(context,MaterialPageRoute(builder: (context){
               return NumberPage();
@@ -19,16 +19,16 @@ class TokuAppBody extends StatelessWidget {
           color:Color(0xffEf9235),
           text: 'Numbers',
         ),
-         container(
+         catgory(
           color:Color(0xff558B37),
           text: 'Family Member ',
         ),
-        container(
+        catgory(
           color:Color(0xff79359F),
           text: 'Phrases ',
         ),
        
-        container(
+        catgory(
           color:Color(0xff50ADC7),
           text: 'Phrases ',
         ),

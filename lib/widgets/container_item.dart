@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-class container extends StatelessWidget {
-   container({
+class catgory extends StatelessWidget {
+   catgory({
     super.key,  this.color,  this.text, this.onTap,
   });
    
@@ -18,7 +18,7 @@ class container extends StatelessWidget {
           height: 90,
           width: double.infinity,
           color: color,
-          child: Text(text!,style: TextStyle(
+          child: Text(text??'',style: TextStyle(
             color: Colors.white,
             fontSize: 20,
           ),),
