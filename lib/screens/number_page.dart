@@ -1,15 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:lnguage_app/component/item.dart';
 import 'package:lnguage_app/models/Human.dart';
 
 
 class NumberPage extends StatelessWidget {
-   NumberPage({super.key});
+ const  NumberPage({super.key});
 
+final List<Human>humans=const[
 
-
-Human  h1= Human(image:'assets/images/numbers/number_one.png' , title: 'ichi', subtitle: 'one', icon:Icons.play_arrow );
-
-  
+  Human(image:'assets/images/numbers/number_one.png' , title: 'ichi', subtitle: 'one', icon:Icons.play_arrow ),
+  Human(image:'assets/images/numbers/number_two.png' , title: 'Ni', subtitle: 'Two', icon:Icons.play_arrow ),
+  Human(image:'assets/images/numbers/number_three.png' , title: 'San', subtitle: 'Three', icon:Icons.play_arrow ),
+  Human(image:'assets/images/numbers/number_four.png' , title: 'Shi', subtitle: 'Four', icon:Icons.play_arrow ),
+  Human(image:'assets/images/numbers/number_five.png' , title: 'Go', subtitle: 'Five', icon:Icons.play_arrow ),
+  Human(image:'assets/images/numbers/number_six.png' , title: 'Roku', subtitle: 'Six', icon:Icons.play_arrow ),
+  Human(image:'assets/images/numbers/number_seven.png' , title: 'Sebun', subtitle: 'Seven', icon:Icons.play_arrow ),
+  Human(image:'assets/images/numbers/number_nine.png' , title: 'Kyu', subtitle: 'Nine', icon:Icons.play_arrow ),
+  Human(image:'assets/images/numbers/number_ten.png' , title: 'Ju', subtitle: 'Ten', icon:Icons.play_arrow ),
+];
 
   @override
   Widget build(BuildContext context) {
@@ -18,35 +26,12 @@ Human  h1= Human(image:'assets/images/numbers/number_one.png' , title: 'ichi', s
         backgroundColor:Color(0xff46322B),
         title: Text('Number Page',style: TextStyle(color: Colors.white),),
         ),
-        body: Container(
-          color: Color(0xffEf9235),
-          height: 100,
-          child: Row(
-          
-            children: [
-              Container(
-                color: Color(0xffFFF6CD),
-                child: Image.asset(h1.image)),
-              Padding(
-                padding: const EdgeInsets.only(left: 16),
-                child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(h1.title,style: TextStyle(color: Colors.white,fontSize: 18),),
-                    Text(h1.subtitle,style: TextStyle(color: Colors.white,fontSize:18 ),)
-                  ],
-                ),
-              ),
-              Spacer(flex: 1,),
-           
-              Padding(
-                padding: const EdgeInsets.only(right: 16),
-                child: Icon(h1.icon,color: Colors.white,size: 30,),
-              )
-
-            ],
-          ),
-        ),
+        body: ListView.builder(
+          itemCount: humans.length,
+          itemBuilder: (context,index){
+          return item(h12:humans[index] );
+        },)
     );
   }
 }
+
