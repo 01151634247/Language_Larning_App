@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:lnguage_app/screens/container_item.dart';
+import 'package:lnguage_app/screens/number_page.dart';
+import 'package:lnguage_app/widgets/container_item.dart';
 
 class TokuAppBody extends StatelessWidget {
   const TokuAppBody ({super.key});
@@ -10,6 +11,11 @@ class TokuAppBody extends StatelessWidget {
     return Column(
       children: [
         container(
+          onTap: () {
+            Navigator.push(context,MaterialPageRoute(builder: (context){
+              return NumberPage();
+            }));
+          },
           color:Color(0xffEf9235),
           text: 'Numbers',
         ),
