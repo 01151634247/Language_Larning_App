@@ -9,15 +9,17 @@ class container extends StatelessWidget {
    final String text;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      height: 90,
-      width: double.infinity,
-      color: color,
-      child: Text(text,style: TextStyle(
-        color: Colors.white,
-        fontSize: 20,
-      ),),
+    return Expanded(
+      child: Container(
+        alignment: Alignment.center,
+        height: 90,
+        width: double.infinity,
+        color: color,
+        child: Text(text,style: TextStyle(
+          color: Colors.white,
+          fontSize: 20,
+        ),),
+      ),
     );
   }
 }
