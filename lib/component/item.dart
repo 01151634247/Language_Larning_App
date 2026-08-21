@@ -6,15 +6,16 @@ import 'package:lnguage_app/models/Human.dart';
 class item extends StatelessWidget {
   const item({
     super.key,
-    required this.h12,
+    required this.h12, required this.color,
   });
 
   final Human h12;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xffEf9235),
+      color: color,
       height: 100,
       child: Row(
       

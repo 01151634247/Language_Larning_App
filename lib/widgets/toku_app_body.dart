@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:lnguage_app/screens/member_page.dart';
 import 'package:lnguage_app/screens/number_page.dart';
 import 'package:lnguage_app/widgets/container_item.dart';
 
@@ -20,6 +21,16 @@ class TokuAppBody extends StatelessWidget {
           text: 'Numbers',
         ),
          catgory(
+          onTap: () {
+             Navigator.push(context,MaterialPageRoute(builder: (context){
+              return MemberPage();
+            }));
+            
+          },
+
+          
+
+
           color:Color(0xff558B37),
           text: 'Family Member ',
         ),

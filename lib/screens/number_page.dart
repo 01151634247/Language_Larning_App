@@ -29,7 +29,9 @@ final List<Human>humans=const[
         body: ListView.builder(
           itemCount: humans.length,
           itemBuilder: (context,index){
-          return item(h12:humans[index] );
+          return item(
+            color: Color(0xffEf9235),
+            h12:humans[index] );
         },)
     );
   }
