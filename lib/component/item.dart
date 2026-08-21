@@ -35,8 +35,11 @@ class item extends StatelessWidget {
        
           Padding(
             padding: const EdgeInsets.only(right: 16),
-            child: Icon(h12.icon,color: Colors.white,size: 30,),
-          )
+            child:ElevatedButton(onPressed: (){
+
+
+            }, child: Icon(Icons.play_arrow),), 
+          ),
     
         ],
       ),
