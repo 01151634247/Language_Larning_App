@@ -1,4 +1,5 @@
 
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:lnguage_app/models/Human.dart';
 
@@ -35,7 +36,14 @@ class item extends StatelessWidget {
        
           Padding(
             padding: const EdgeInsets.only(right: 16),
-            child:ElevatedButton(onPressed: (){
+            child:ElevatedButton(
+              onPressed: (){
+                //version 4.1.0
+                final player =AudioPlayer();
+                player.play(AssetSource('sounds/numbers/number_one_sound.mp3'),);
+
+                
+              
 
 
             }, child: Icon(Icons.play_arrow),), 
