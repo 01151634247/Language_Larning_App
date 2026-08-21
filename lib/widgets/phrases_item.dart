@@ -3,15 +3,11 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:lnguage_app/models/Human.dart';
 
-class item extends StatelessWidget {
-  const item({
-    super.key,
-    required this.h12, required this.color,
-  });
+class phrasesitem extends StatelessWidget {
+  const phrasesitem({super.key, required this.h12, required this.color});
 
-  final Human h12;
+ final Human h12;
   final Color color;
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,9 +16,6 @@ class item extends StatelessWidget {
       child: Row(
       
         children: [
-          Container(
-            color: Color(0xffFFF6CD),
-            child: Image.asset(h12.image??"")),
           Padding(
             padding: const EdgeInsets.only(left: 16),
             child: Column(
