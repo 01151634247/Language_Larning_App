@@ -37,10 +37,10 @@ class item extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 16),
             child:ElevatedButton(
-              onPressed: (){
+              onPressed: ()async{
                 //version 4.1.0
                 final player =AudioPlayer();
-                player.play(AssetSource('sounds/numbers/number_one_sound.mp3'),);
+             await player.play(AssetSource(h12.sound),);
 
                 
               
